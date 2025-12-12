@@ -2,17 +2,17 @@
 
 This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
 
--Response Relevance
+   -Response Relevance
 
--Context Completeness
+   -Context Completeness
 
--Hallucination Detection
+   -Hallucination Detection
 
--Latency Measurement
+   -Latency Measurement
 
--Token & Cost Estimation
+   -Token & Cost Estimation
 
--Grading (A–F)
+   -Grading (A–F)
 
 It consumes two JSON inputs:
 
