@@ -1,47 +1,46 @@
-💻 Local Setup Instructions
-1️⃣ #Clone the repository
+# 💻 Local Setup Instructions
+1️⃣ Clone the repository
 
-git clone https://github.com/ishankhurana27/LLM-Response-Evaluator.git
-cd LLM-Response-Evaluator
+- git clone https://github.com/ishankhurana27/LLM-Response-Evaluator.git
 
-2️⃣ #Create and activate a virtual environment
+- cd LLM-Response-Evaluator
+
+2️⃣ Create and activate a virtual environment
 
 Windows:
--python -m venv venv
--venv\Scripts\activate
+- python -m venv venv
+- venv\Scripts\activate
 
 Mac/Linux:
--python3 -m venv venv
--source venv/bin/activate
+- python3 -m venv venv
+- source venv/bin/activate
 
-3️⃣ #Install dependencies
+3️⃣ Install dependencies
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
-4️⃣ #Download spaCy language model
+4️⃣ Download spaCy language model
 
-python -m spacy download en_core_web_sm
+- python -m spacy download en_core_web_sm
 
-5️⃣ #Run the evaluator
+5️⃣ Run the evaluator
 
-Run with your input JSONs:
-Example:
+- Run with your input JSONs:
+ - Example:
+    - python main.py --conv data/conversation_hotels.json --ctx data/context_hotels.json --out report_hotels.json
 
-python main.py --conv data/conversation_hotels.json --ctx data/context_hotels.json --out report_hotels.json
+6️⃣ View the output
 
-6️⃣ #View the output
+- Your evaluated report will appear in:
+  - report_hotels.json
 
-Your evaluated report will appear in:
-report_hotels.json
-
-Or whichever file you specified.
-
+- Or whichever file you specified.
 
 
 
+# 🧩 OVERVIEW 
 
-🧩 # OVERVIEW
--This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
+* This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
    - Response Relevance
    - Context Completeness
    - Hallucination Detection
@@ -49,7 +48,7 @@ Or whichever file you specified.
    - Token & Cost Estimation
    - Grading (A–F)
 
-It consumes two JSON inputs:
+* It consumes two JSON inputs:
 
 1. Conversation JSON → Contains the user message and LLM response
 2. Context JSON → Contains context chunks retrieved from a vector database
@@ -57,19 +56,19 @@ It consumes two JSON inputs:
 The system evaluates whether the LLM followed the context, avoided hallucinations, and responded fully and accurately.
 
 
-📦 KEY FEATURES
+# 📦 KEY FEATURES
 
 ✅ Context-aware relevance scoring
 
-Uses dense embeddings to check how well the LLM response matches the user query + provided context.
+* Uses dense embeddings to check how well the LLM response matches the user query + provided context.
 
 ✅ Completeness measurement
 
-Checks how many context chunks the LLM actually used.
+* Checks how many context chunks the LLM actually used.
 
 ✅ Advanced hallucination detection
 
--Combines:
+- Combines:
  - Sentence embeddings
  - spaCy concept extraction
  - Concept-overlap analysis
@@ -79,18 +78,18 @@ This avoids false hallucination flags for short factual sentences.
 
 ✅ Grading System (A–F)
 
-Weighted evaluation based on relevance, completeness, and hallucination severity.
+* Weighted evaluation based on relevance, completeness, and hallucination severity.
 
 ✅ Fast & low-cost execution
 
-Evaluates responses in milliseconds with minimal compute.
+* Evaluates responses in milliseconds with minimal compute.
 
 ✅ Modular architecture
 
-Easy to extend for additional scoring metrics.
+* Easy to extend for additional scoring metrics.
 
 
-ARCHITECTURE
+# ARCHITECTURE
 
                 ┌──────────────────────┐
                 │   Input JSONs        │
@@ -119,7 +118,10 @@ ARCHITECTURE
          │           Final Report             │
          └───────────────────────────────────┘
 
-🛠 TECHNOLOGIES USED & WHY
+
+         
+
+# 🛠 TECHNOLOGIES USED & WHY
 
 🔹 1. Python
 
@@ -137,13 +139,13 @@ Chosen because it provides the best tradeoff:
 
 MiniLM gives:
 
--384-dim embeddings (FAISS-friendly)
+- 384-dim embeddings (FAISS-friendly)
 
--< 5ms embedding time
+- < 5ms embedding time
 
--Strong semantic matching
+- Strong semantic matching
 
--Excellent for small hardware
+- Excellent for small hardware
 
 This makes it ideal for large-scale evaluation workloads.
 
@@ -152,30 +154,30 @@ This makes it ideal for large-scale evaluation workloads.
 
 Why FAISS?
 
---Extremely fast cosine similarity search
+- Extremely fast cosine similarity search
 
---GPU acceleration optional
+- GPU acceleration optional
 
---Lightweight and memory-efficient
+- Lightweight and memory-efficient
 
---No server needed (unlike Pinecone, Weaviate)
+- No server needed (unlike Pinecone, Weaviate)
 
---Perfect for embedding comparisons at evaluation time
+- Perfect for embedding comparisons at evaluation time
 
---Used here not for retrieval, but for fast similarity scoring across context chunks.
+- Used here not for retrieval, but for fast similarity scoring across context chunks.
 
 🔹 4. spaCy (NER + Concept Extraction)
 
 Simple regex-based claim extraction is NOT enough.
 We upgraded to spaCy because:
 
---It extracts entities and noun phrases
+- It extracts entities and noun phrases
 
---Helps determine new concepts introduced by the LLM
+- Helps determine new concepts introduced by the LLM
 
---Reduces false hallucination detections
+- Reduces false hallucination detections
 
---Supports domain-agnostic text (medicine, finance, tech, etc.)
+- Supports domain-agnostic text (medicine, finance, tech, etc.)
 
 Alternatives considered:
 | Tool                      | Why rejected             |
@@ -184,16 +186,16 @@ Alternatives considered:
 | **Regex only**            | Fails for complex claims |
 | **transformer-based NER** | Too heavy for real-time  |
 
-🚀 WHY THIS DESIGN? (Design Choices Explained)
+# 🚀 WHY THIS DESIGN? (Design Choices Explained)
 ✔ Fast local inference
 
-Using MiniLM + spaCy means the pipeline runs without GPU, making it suitable for local setups and enterprise scaling.
+* Using MiniLM + spaCy means the pipeline runs without GPU, making it suitable for local setups and enterprise scaling.
 
 ✔ Hallucination detection is concept-based, not keyword-based
 
-Short factual responses like:
+* Short factual responses like:
 
-"The A15 chip."
+     - "The A15 chip."
 
 should not be marked hallucinations.
 Our concept-overlap + new-entity detection solves this problem better than pure cosine similarity.
@@ -213,13 +215,13 @@ Total average evaluation time: 0.05–0.15 sec per conversation.
 
 At scale:
 
--Can evaluate ~10–20 million responses/day per server
+- Can evaluate ~10–20 million responses/day per server
 
--Fully CPU-friendly
+- Fully CPU-friendly
 
--No external API costs
+- No external API costs
 
-⚡ Scalability & Cost Optimization
+# ⚡ Scalability & Cost Optimization
 ⭐ No external API calls
 
 → Zero per-token or per-request cost.
