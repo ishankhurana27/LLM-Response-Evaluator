@@ -1,8 +1,40 @@
 💻 Local Setup Instructions
-1) Clone the repo
-   -git clone https://github.com/yourname/llm-response-evaluator
-   -cd llm-response-evaluator
+1️⃣ Clone the repository
 
+git clone https://github.com/ishankhurana27/LLM-Response-Evaluator.git
+cd LLM-Response-Evaluator
+
+2️⃣ Create and activate a virtual environment
+
+Windows:
+-python -m venv venv
+-venv\Scripts\activate
+
+Mac/Linux:
+-python3 -m venv venv
+-source venv/bin/activate
+
+3️⃣ Install dependencies
+
+pip install -r requirements.txt
+
+4️⃣ Download spaCy language model
+
+python -m spacy download en_core_web_sm
+
+5️⃣ Run the evaluator
+
+Run with your input JSONs:
+Example:
+
+python main.py --conv data/conversation_hotels.json --ctx data/context_hotels.json --out report_hotels.json
+
+6️⃣ View the output
+
+Your evaluated report will appear in:
+report_hotels.json
+
+Or whichever file you specified.
 
 
 🧩 OVERVIEW
