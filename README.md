@@ -1,16 +1,6 @@
 💻 Local Setup Instructions
 1. Clone the repo
 
--git clone https://github.com/yourname/llm-response-evaluator
--cd llm-response-evaluator
-      
-
-3. Create virtual environment
-   
--python -m venv venv
--source venv/bin/activate     # Linux/Mac
--venv\Scripts\activate        # Windows
-
 
 3. Install dependencies
 
