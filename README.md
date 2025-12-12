@@ -1,10 +1,10 @@
 💻 Local Setup Instructions
-1️⃣ Clone the repository
+1️⃣ #Clone the repository
 
 git clone https://github.com/ishankhurana27/LLM-Response-Evaluator.git
 cd LLM-Response-Evaluator
 
-2️⃣ Create and activate a virtual environment
+2️⃣ #Create and activate a virtual environment
 
 Windows:
 -python -m venv venv
@@ -14,22 +14,22 @@ Mac/Linux:
 -python3 -m venv venv
 -source venv/bin/activate
 
-3️⃣ Install dependencies
+3️⃣ #Install dependencies
 
 pip install -r requirements.txt
 
-4️⃣ Download spaCy language model
+4️⃣ #Download spaCy language model
 
 python -m spacy download en_core_web_sm
 
-5️⃣ Run the evaluator
+5️⃣ #Run the evaluator
 
 Run with your input JSONs:
 Example:
 
 python main.py --conv data/conversation_hotels.json --ctx data/context_hotels.json --out report_hotels.json
 
-6️⃣ View the output
+6️⃣ #View the output
 
 Your evaluated report will appear in:
 report_hotels.json
@@ -37,32 +37,28 @@ report_hotels.json
 Or whichever file you specified.
 
 
-🧩 OVERVIEW
 
-This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
 
-   -Response Relevance
 
-   -Context Completeness
-
-   -Hallucination Detection
-
-   -Latency Measurement
-
-   -Token & Cost Estimation
-
-   -Grading (A–F)
+🧩 **OVERVIEW
+-This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
+   - Response Relevance
+   - Context Completeness
+   - Hallucination Detection
+   - Latency Measurement
+   - Token & Cost Estimation
+   - Grading (A–F)
 
 It consumes two JSON inputs:
 
-1)Conversation JSON → Contains the user message and LLM response
-
-2)Context JSON → Contains context chunks retrieved from a vector database
-
+1. Conversation JSON → Contains the user message and LLM response
+2. Context JSON → Contains context chunks retrieved from a vector database
+   
 The system evaluates whether the LLM followed the context, avoided hallucinations, and responded fully and accurately.
 
 
 📦 KEY FEATURES
+
 ✅ Context-aware relevance scoring
 
 Uses dense embeddings to check how well the LLM response matches the user query + provided context.
@@ -73,15 +69,11 @@ Checks how many context chunks the LLM actually used.
 
 ✅ Advanced hallucination detection
 
-Combines:
-
-Sentence embeddings
-
-spaCy concept extraction
-
-Concept-overlap analysis
-
-New-entity detection
+-Combines:
+ - Sentence embeddings
+ - spaCy concept extraction
+ - Concept-overlap analysis
+ - New-entity detection
 
 This avoids false hallucination flags for short factual sentences.
 
