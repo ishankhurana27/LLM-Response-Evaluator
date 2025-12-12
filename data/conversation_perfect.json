@@ -1,0 +1,7 @@
+
+{
+  "messages": [
+    {"role": "user", "content": "Suggest budget hotels near Malpani Infertility Clinic."},
+    {"role": "assistant", "content": "Hotel Sunrise is 600m from the clinic and very affordable. GreenView is another good nearby option with rooms around ₹1800."}
+  ]
+}

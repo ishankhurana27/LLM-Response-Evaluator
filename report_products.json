@@ -1,0 +1,38 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.757,
+    "similarity_with_user": 0.545,
+    "similarity_with_contexts_top5": 0.968,
+    "completeness_score": 0.5,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": null,
+        "semantic_score": 0.9677151670069478,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": null,
+        "semantic_score": 0.4057163030895599,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "The iPhone 14 has a 6.1-inch OLED display",
+      "the A15 chip."
+    ],
+    "unsupported_claims": [],
+    "hallucination_rate": 0.0
+  },
+  "grade": {
+    "grade": "B",
+    "reason": "Good relevance and acceptable completeness with low hallucination."
+  },
+  "evaluation_wall_time_seconds": 0.115,
+  "token_estimate_input": 41.0,
+  "token_estimate_output": 16.0,
+  "estimated_cost_usd": 9.3e-05
+}

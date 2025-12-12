@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "text": "The human heart has four chambers: left atrium, right atrium, left ventricle, and right ventricle.",
+    "tokens": 20
+  },
+  {
+    "id": 2,
+    "text": "The heart pumps oxygenated blood throughout the body via the circulatory system.",
+    "tokens": 20
+  }
+]

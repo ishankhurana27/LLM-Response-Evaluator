@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "Compare the iPhone 14 and Samsung S22."},
+    {"role": "assistant", "content": "The iPhone 14 has a 6.1-inch OLED display and the A15 chip."}
+  ]
+}

@@ -1,0 +1,13 @@
+
+[
+  {
+    "id": 1,
+    "text": "Hotel Sunrise is a budget hotel located 600m from Malpani Infertility Clinic in Colaba, Mumbai.",
+    "tokens": 22
+  },
+  {
+    "id": 2,
+    "text": "Hotel GreenView offers rooms for ₹1800 and is 900m from the clinic.",
+    "tokens": 20
+  }
+]

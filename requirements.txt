@@ -1,0 +1,9 @@
+faiss-cpu
+sentence-transformers
+scikit-learn
+spacy
+transformers
+tqdm
+python-dateutil
+tiktoken
+spacy

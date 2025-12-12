@@ -1,0 +1,43 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.727,
+    "similarity_with_user": 0.618,
+    "similarity_with_contexts_top5": 0.835,
+    "completeness_score": 0.333,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": "hotel a",
+        "semantic_score": 0.8354198181619275,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": "hotel b",
+        "semantic_score": 0.7782801847371748,
+        "covered": false
+      },
+      {
+        "index": 2,
+        "entity": "hotel c",
+        "semantic_score": 0.755441270466749,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Hotel A is near the clinic."
+    ],
+    "unsupported_claims": [],
+    "hallucination_rate": 0.0
+  },
+  "grade": {
+    "grade": "C",
+    "reason": "Moderate relevance and partial completeness with low or zero hallucination."
+  },
+  "evaluation_wall_time_seconds": 0.087,
+  "token_estimate_input": 33.0,
+  "token_estimate_output": 8.0,
+  "estimated_cost_usd": 6.6e-05
+}

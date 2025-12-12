@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "text": "A transformer model uses self-attention mechanisms to process input sequences efficiently.",
+    "tokens": 20
+  },
+  {
+    "id": 2,
+    "text": "Transformers replace recurrent networks like LSTMs and GRUs in many NLP tasks.",
+    "tokens": 18
+  }
+]

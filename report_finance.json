@@ -1,0 +1,48 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.494,
+    "similarity_with_user": 0.523,
+    "similarity_with_contexts_top5": 0.465,
+    "completeness_score": 0.0,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": null,
+        "semantic_score": 0.4646715440968665,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Mutual funds are delicious Indian snacks similar to samosas."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "Mutual funds are delicious Indian snacks similar to samosas.",
+        "semantic_score": 0.465,
+        "concepts": [
+          "snack",
+          "fund",
+          "samosas"
+        ],
+        "overlap_with_context": [
+          "fund"
+        ],
+        "new_concepts": [
+          "snack",
+          "samosas"
+        ]
+      }
+    ],
+    "hallucination_rate": 1.0
+  },
+  "grade": {
+    "grade": "D",
+    "reason": "Low relevance or high hallucination reduces answer quality."
+  },
+  "evaluation_wall_time_seconds": 0.077,
+  "token_estimate_input": 20.0,
+  "token_estimate_output": 12.0,
+  "estimated_cost_usd": 5.4e-05
+}

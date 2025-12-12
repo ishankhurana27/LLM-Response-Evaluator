@@ -1,0 +1,47 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.819,
+    "similarity_with_user": 0.755,
+    "similarity_with_contexts_top5": 0.883,
+    "completeness_score": 1.0,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": null,
+        "semantic_score": 0.8829418531401069,
+        "covered": true
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Paracetamol treats fever",
+      "mild pain,",
+      "cures pneumonia."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "cures pneumonia.",
+        "semantic_score": 0.284,
+        "concepts": [
+          "pneumonia",
+          "cure"
+        ],
+        "overlap_with_context": [],
+        "new_concepts": [
+          "pneumonia",
+          "cure"
+        ]
+      }
+    ],
+    "hallucination_rate": 0.333
+  },
+  "grade": {
+    "grade": "C",
+    "reason": "Moderate relevance and partial completeness with some hallucination."
+  },
+  "evaluation_wall_time_seconds": 0.092,
+  "token_estimate_input": 18.0,
+  "token_estimate_output": 14.0,
+  "estimated_cost_usd": 5.5e-05
+}

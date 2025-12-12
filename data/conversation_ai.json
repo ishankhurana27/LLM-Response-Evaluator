@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "Explain what a transformer model is."},
+    {"role": "assistant", "content": "A transformer model uses self-attention to understand relationships in the input sequence, and it replaces older recurrent models like LSTMs in many NLP tasks."}
+  ]
+}

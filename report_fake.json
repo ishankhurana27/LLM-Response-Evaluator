@@ -1,0 +1,64 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.496,
+    "similarity_with_user": 0.555,
+    "similarity_with_contexts_top5": 0.437,
+    "completeness_score": 0.0,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": "hotel comfortinn",
+        "semantic_score": 0.43652694716721513,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Hilton Garden",
+      "Oberoi Towers are the closest hotels to the clinic."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "Hilton Garden",
+        "semantic_score": 0.197,
+        "concepts": [
+          "hilton",
+          "garden"
+        ],
+        "overlap_with_context": [],
+        "new_concepts": [
+          "hilton",
+          "garden"
+        ]
+      },
+      {
+        "claim": "Oberoi Towers are the closest hotels to the clinic.",
+        "semantic_score": 0.435,
+        "concepts": [
+          "tower",
+          "hotel",
+          "clinic",
+          "oberoi"
+        ],
+        "overlap_with_context": [
+          "hotel",
+          "clinic"
+        ],
+        "new_concepts": [
+          "tower",
+          "oberoi"
+        ]
+      }
+    ],
+    "hallucination_rate": 1.0
+  },
+  "grade": {
+    "grade": "D",
+    "reason": "Low relevance or high hallucination reduces answer quality."
+  },
+  "evaluation_wall_time_seconds": 0.0775,
+  "token_estimate_input": 16.0,
+  "token_estimate_output": 16.0,
+  "estimated_cost_usd": 5.6e-05
+}

@@ -1,0 +1,38 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.658,
+    "similarity_with_user": 0.54,
+    "similarity_with_contexts_top5": 0.775,
+    "completeness_score": 1.0,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": null,
+        "semantic_score": 0.7679497141639858,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": null,
+        "semantic_score": 0.7752326321562484,
+        "covered": true
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "A transformer model uses self-attention to understand relationships in the input sequence,",
+      "it replaces older recurrent models like LSTMs in many NLP tasks."
+    ],
+    "unsupported_claims": [],
+    "hallucination_rate": 0.0
+  },
+  "grade": {
+    "grade": "B",
+    "reason": "Good relevance and acceptable completeness with low hallucination."
+  },
+  "evaluation_wall_time_seconds": 0.116,
+  "token_estimate_input": 37.0,
+  "token_estimate_output": 32.0,
+  "estimated_cost_usd": 0.00012
+}

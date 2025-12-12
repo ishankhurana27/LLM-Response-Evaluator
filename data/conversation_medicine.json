@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "What is paracetamol used for?"},
+    {"role": "assistant", "content": "Paracetamol treats fever and mild pain, and it also cures pneumonia."}
+  ]
+}

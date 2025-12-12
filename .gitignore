@@ -1,0 +1,65 @@
+# -----------------------
+# Python cache & bytecode
+# -----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pdb
+*.pkl
+
+# -----------------------
+# Virtual environments
+# -----------------------
+venv/
+env/
+.venv/
+
+# -----------------------
+# Build / distribution files
+# -----------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# -----------------------
+# FAISS / vector store files
+# -----------------------
+*.index
+*.faiss
+
+# -----------------------
+# Logs
+# -----------------------
+*.log
+
+# -----------------------
+# OS-specific files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Jupyter Notebook checkpoints
+# -----------------------
+.ipynb_checkpoints/
+
+# -----------------------
+# Environment config
+# -----------------------
+.env
+*.env
+
+# -----------------------
+# VSCode / PyCharm configs
+# -----------------------
+.vscode/
+.idea/
+
+# -----------------------
+# Cache directories
+# -----------------------
+.cache/
+.spacy/

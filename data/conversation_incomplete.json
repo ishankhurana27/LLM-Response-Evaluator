@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "List hotels near Malpani Clinic."},
+    {"role": "assistant", "content": "Hotel A is near the clinic."}
+  ]
+}

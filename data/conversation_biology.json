@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "Explain how the human heart works."},
+    {"role": "assistant", "content": "The human heart pumps blood through the body using its four chambers. It includes the left and right atriums, and the ventricles."}
+  ]
+}

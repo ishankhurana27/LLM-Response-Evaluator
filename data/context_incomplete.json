@@ -1,0 +1,5 @@
+[
+  {"id": 1, "text": "Hotel A is 400m from the clinic.", "tokens": 10},
+  {"id": 2, "text": "Hotel B is 1km from the clinic.", "tokens": 12},
+  {"id": 3, "text": "Hotel C is 1.5km from the clinic.", "tokens": 12}
+]

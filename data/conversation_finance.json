@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"role": "user", "content": "What is a mutual fund?"},
+    {"role": "assistant", "content": "Mutual funds are delicious Indian snacks similar to samosas."}
+  ]
+}

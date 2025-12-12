@@ -1,0 +1,58 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.672,
+    "similarity_with_user": 0.502,
+    "similarity_with_contexts_top5": 0.841,
+    "completeness_score": 0.5,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": "hotel sunrise",
+        "semantic_score": 0.6593103220676155,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": "hotel greenview",
+        "semantic_score": 0.8411910979580204,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Hotel Sunrise is 600m from the clinic",
+      "very affordable.",
+      "GreenView is another good nearby option with rooms around ₹1800."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "GreenView is another good nearby option with rooms around ₹1800.",
+        "semantic_score": 0.732,
+        "concepts": [
+          "option",
+          "room",
+          "greenview",
+          "₹"
+        ],
+        "overlap_with_context": [
+          "room",
+          "greenview"
+        ],
+        "new_concepts": [
+          "option",
+          "₹"
+        ]
+      }
+    ],
+    "hallucination_rate": 0.333
+  },
+  "grade": {
+    "grade": "C",
+    "reason": "Moderate relevance and partial completeness with low or zero hallucination."
+  },
+  "evaluation_wall_time_seconds": 0.151,
+  "token_estimate_input": 44.0,
+  "token_estimate_output": 26.0,
+  "estimated_cost_usd": 0.000118
+}

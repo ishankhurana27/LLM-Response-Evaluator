@@ -1,0 +1,74 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.751,
+    "similarity_with_user": 0.671,
+    "similarity_with_contexts_top5": 0.831,
+    "completeness_score": 1.0,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": null,
+        "semantic_score": 0.8314538794216553,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": null,
+        "semantic_score": 0.7189621549335166,
+        "covered": true
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "The human heart pumps blood through the body using its four chambers.",
+      "It includes the left",
+      "right atriums,",
+      "the ventricles."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "The human heart pumps blood through the body using its four chambers.",
+        "semantic_score": 0.754,
+        "concepts": [
+          "chamber",
+          "body",
+          "use",
+          "pump",
+          "blood",
+          "heart"
+        ],
+        "overlap_with_context": [
+          "chamber",
+          "body",
+          "pump",
+          "blood",
+          "heart"
+        ],
+        "new_concepts": [
+          "use"
+        ]
+      },
+      {
+        "claim": "It includes the left",
+        "semantic_score": 0.287,
+        "concepts": [
+          "include"
+        ],
+        "overlap_with_context": [],
+        "new_concepts": [
+          "include"
+        ]
+      }
+    ],
+    "hallucination_rate": 0.5
+  },
+  "grade": {
+    "grade": "D",
+    "reason": "Low relevance or high hallucination reduces answer quality."
+  },
+  "evaluation_wall_time_seconds": 0.141,
+  "token_estimate_input": 42.0,
+  "token_estimate_output": 29.0,
+  "estimated_cost_usd": 0.000121
+}

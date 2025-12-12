@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "text": "The iPhone 14 features a 6.1-inch OLED display and the A15 Bionic chip.",
+    "tokens": 16
+  },
+  {
+    "id": 2,
+    "text": "The Samsung Galaxy S22 features a Dynamic AMOLED display and Snapdragon processor.",
+    "tokens": 16
+  }
+]

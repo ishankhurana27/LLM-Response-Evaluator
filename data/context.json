@@ -1,0 +1,4 @@
+[
+{"id": 1, "text": "Hotel Fortune is a budget hotel located 500m from Malpani Infertility Clinic in Colaba, Mumbai. Rooms start at ₹1500.", "tokens": 45, "source_url": "https://example.com/fortune"},
+{"id": 2, "text": "Colaba Residency is a mid-range hotel 1.2 km from the clinic, rooms ₹2200.", "tokens": 30, "source_url": "https://example.com/colaba"}
+]

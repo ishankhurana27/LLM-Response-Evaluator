@@ -1,0 +1,99 @@
+{
+  "relevance_and_completeness": {
+    "relevance_score": 0.688,
+    "similarity_with_user": 0.664,
+    "similarity_with_contexts_top5": 0.713,
+    "completeness_score": 0.5,
+    "coverage": [
+      {
+        "index": 0,
+        "entity": "hotel fortune",
+        "semantic_score": 0.7127543895378075,
+        "covered": true
+      },
+      {
+        "index": 1,
+        "entity": "hotel 1",
+        "semantic_score": 0.4856529210646441,
+        "covered": false
+      }
+    ]
+  },
+  "hallucination_analysis": {
+    "claims_extracted": [
+      "Hotel Fortune is 500m from Malpani Clinic",
+      "offers rooms for ₹1500/night.",
+      "Taj Palace is nearby",
+      "premium."
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "Hotel Fortune is 500m from Malpani Clinic",
+        "semantic_score": 0.756,
+        "concepts": [
+          "fortune",
+          "clinic",
+          "malpani",
+          "hotel",
+          "m"
+        ],
+        "overlap_with_context": [
+          "hotel",
+          "fortune",
+          "m",
+          "clinic"
+        ],
+        "new_concepts": [
+          "malpani"
+        ]
+      },
+      {
+        "claim": "offers rooms for ₹1500/night.",
+        "semantic_score": 0.482,
+        "concepts": [
+          "night",
+          "offer",
+          "room"
+        ],
+        "overlap_with_context": [
+          "room"
+        ],
+        "new_concepts": [
+          "night",
+          "offer"
+        ]
+      },
+      {
+        "claim": "Taj Palace is nearby",
+        "semantic_score": 0.297,
+        "concepts": [
+          "palace"
+        ],
+        "overlap_with_context": [],
+        "new_concepts": [
+          "palace"
+        ]
+      },
+      {
+        "claim": "premium.",
+        "semantic_score": 0.089,
+        "concepts": [
+          "premium"
+        ],
+        "overlap_with_context": [],
+        "new_concepts": [
+          "premium"
+        ]
+      }
+    ],
+    "hallucination_rate": 1.0
+  },
+  "grade": {
+    "grade": "D",
+    "reason": "Low relevance or high hallucination reduces answer quality."
+  },
+  "evaluation_wall_time_seconds": 0.146,
+  "token_estimate_input": 56.0,
+  "token_estimate_output": 24.0,
+  "estimated_cost_usd": 0.000132
+}

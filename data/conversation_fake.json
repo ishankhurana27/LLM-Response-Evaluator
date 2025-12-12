@@ -1,0 +1,7 @@
+
+{
+  "messages": [
+    {"role": "user", "content": "Find hotels near Malpani Clinic."},
+    {"role": "assistant", "content": "Hilton Garden and Oberoi Towers are the closest hotels to the clinic."}
+  ]
+}
