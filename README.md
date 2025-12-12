@@ -1,4 +1,23 @@
-1. create a virtualenv and install requirements: `pip install -r requirements.txt`
-2. put sample conversation.json and context.json in the `data/` folder
-3. run: `python main.py --conv data/conversation.json --ctx data/context.json --out report.json`
-4. open `report.json` to see the scores
+🧩 Overview
+
+This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
+
+Response Relevance
+
+Context Completeness
+
+Hallucination Detection
+
+Latency Measurement
+
+Token & Cost Estimation
+
+Grading (A–F)
+
+It consumes two JSON inputs:
+
+Conversation JSON → Contains the user message and LLM response
+
+Context JSON → Contains context chunks retrieved from a vector database
+
+The system evaluates whether the LLM followed the context, avoided hallucinations, and responded fully and accurately.
