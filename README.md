@@ -1,3 +1,22 @@
+💻 Local Setup Instructions
+1. Clone the repo
+git clone https://github.com/yourname/llm-response-evaluator
+cd llm-response-evaluator
+
+2. Create virtual environment
+python -m venv venv
+source venv/bin/activate     # Linux/Mac
+venv\Scripts\activate        # Windows
+
+3. Install dependencies
+pip install -r requirements.txt
+
+4. Download spaCy model
+python -m spacy download en_core_web_sm
+
+5. Run evaluator
+python main.py --conv data/sample_conv.json --ctx data/sample_context.json --out result.json
+
 🧩 OVERVIEW
 
 This project implements a lightweight, real-time LLM evaluation pipeline that automatically scores any LLM response on:
@@ -182,9 +201,34 @@ Total average evaluation time: 0.05–0.15 sec per conversation.
 
 At scale:
 
-      Can evaluate ~10–20 million responses/day per server
+-Can evaluate ~10–20 million responses/day per server
 
-      Fully CPU-friendly
+-Fully CPU-friendly
 
-      No external API costs
+-No external API costs
+
+⚡ Scalability & Cost Optimization
+⭐ No external API calls
+
+→ Zero per-token or per-request cost.
+
+⭐ Lightweight models
+
+→ Runs entirely on CPU, low RAM usage (<300MB).
+
+⭐ Embedding model is small & efficient
+
+→ <10ms total embedding overhead.
+
+⭐ Vector store is in-memory FAISS
+
+→ Sub-millisecond similarity scoring.
+
+⭐ No deep neural model execution
+
+We avoid running a full LLM for evaluation → huge cost savings.
+
+⭐ Stateless evaluator
+
+Can scale horizontally with simple load balancing.
 
