@@ -1,8 +1,8 @@
 💻 Local Setup Instructions
 1. Clone the repo
    
-git clone https://github.com/yourname/llm-response-evaluator
-cd llm-response-evaluator
+      git clone https://github.com/yourname/llm-response-evaluator
+      cd llm-response-evaluator
 
 2. Create virtual environment
    
