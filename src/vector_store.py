@@ -1,5 +1,5 @@
 
-# src/vector_store.py
+#vector_store.py
 import faiss
 import numpy as np
 from typing import List, Dict, Any
@@ -12,7 +12,6 @@ class FaissStore:
 
     def add(self, vectors: List[List[float]], metadatas: List[Dict[str, Any]]):
         arr = np.array(vectors, dtype='float32')
-        # ensure normalization
         norms = np.linalg.norm(arr, axis=1, keepdims=True) + 1e-9
         arr = arr / norms
         self.index.add(arr)
